@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Bài 1:</p>
+<p id="b1"></p>
+<div> Bài 2:</div>
+<div id="kq"></div>
+
+<p> Bài 3:</p>
+<p> Nhập giá trị cho số a:</p>
+<button type="button" onclick="prompt1()">Nhập</button>
+<p> Nhập giá trị cho số b:</p>
+<button type="button" onclick="prompt2()">Nhập</button>
+<p>Kết quả:</p>
+<button type="button" onclick="kq2()">kiểm tra</button>
+<script>
+    let i = 10
+    let f = 20.5
+    let e = true
+    let s = 'Hà Nội'
+    let a = 0
+    let b = 0
+    document.getElementById("b1").innerHTML = "i=" + i + "<br/>" + 'f = ' + f + '<br/>' + 'b = ' + b + '<br/>' + 's = ' + s
+
+    let width = 20
+    let height = 10
+    let area = width * height
+    document.getElementById("kq").innerHTML = "diện tích hình chữ nhật =" + area
+
+    function prompt1() {
+        a = prompt("a=")
+    }
+
+    function prompt2() {
+        b = prompt("b=")
+    }
+
+
+    function kq2() {
+        let c = a % b
+        if (c == 0) alert("a là bội của b")
+        else alert("a không là bội của b")
+    }
+
+</script>
+</body>
+</html>
