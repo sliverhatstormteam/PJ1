@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Giá trị</th>
+        <th>Loại</th>
+        <th>Đến Loại</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="tien"></td>
+        <td>
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ChangeMoney()">Đổi</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="kq"></p>
+<script>
+    function ChangeMoney() {
+        let Amount = document.getElementById("tien").value;
+        let FromC = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let kq;
+
+
+        if (FromC == "USD" && To == "VND") {
+            kq = "Kết quả " + (Amount * 23000) + " Đ";
+        }
+        else if (FromC == "VND"&& To =="USD"){
+            kq = "Kết quả "+ (Amount / 23000) + " $";
+        }
+        else if (FromC == "VND") {
+            kq = "Kết quả " + Amount + " Đ"
+        } else {
+            kq = "Kết quả " + Amount + " $"
+        }
+
+        document.getElementById("kq").innerHTML = kq;
+    }
+</script>
+</body>
+</html>
