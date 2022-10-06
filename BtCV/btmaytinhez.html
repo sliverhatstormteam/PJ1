@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinhEz</title>
+</head>
+<body>
+<h1> CalCUlaTO</h1>
+<input type="number" id="a">
+<input type="number" id="b">
+<button type="button" onclick="cong()">cộng</button>
+<button type="button" onclick="tru()">trừ </button>
+<button type="button" onclick="nhan()">nhân</button>
+<button type="button" onclick="chia()">chia</button>
+<p id="kq"></p>
+<script>
+  function cong(){
+    let a = parseInt(document.getElementById("a").value)
+    let b = parseInt(document.getElementById("b").value)
+    let kq= a+b
+    document.getElementById("kq").innerHTML= kq.toString()
+  }
+  function tru(){
+    let a = parseInt(document.getElementById("a").value)
+    let b = parseInt(document.getElementById("b").value)
+    let kq= a-b
+    document.getElementById("kq").innerHTML= kq.toString()
+  }
+  function nhan(){
+    let a = parseInt(document.getElementById("a").value)
+    let b = parseInt(document.getElementById("b").value)
+    let kq= a*b
+    document.getElementById("kq").innerHTML= kq.toString()
+  }
+  function chia(){
+    let a = parseInt(document.getElementById("a").value)
+    let b = parseInt(document.getElementById("b").value)
+    let kq= a/b
+    document.getElementById("kq").innerHTML= kq.toString()
+  }
+</script>
+</body>
+</html>
