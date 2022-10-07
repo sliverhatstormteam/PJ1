@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="bai1()">Bai tap 1</button>
+<button type="button" onclick="bai2()">Bai tap 2</button>
+<button type="button" onclick="bai3()">Bai tap 3</button>
+<script>
+  function bai1(){
+    let a = parseInt(prompt("a="));
+    let b = parseInt(prompt("b="));
+
+    if((a+b)<4){
+      alert('Below')
+    }
+    else alert("over")
+  }
+  function bai2(){
+    let login = prompt("Enter:");
+    let message = (login == 'Employee') ?
+            'Hello' :
+            (login == 'Director') ?
+                    'Greetings' :
+                    (login == '') ?
+                            'No login' :
+                            '';
+    alert(message);
+  }
+  function bai3(){}
+</script>
+</body>
+</html>
