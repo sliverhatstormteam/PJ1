@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập cân nặng:</td>
+        <td><input type="text" id="nang"></td>
+    </tr>
+    <tr>
+        <td>Nhập chiều cao:</td>
+        <td><input id="cao" type="text"></td>
+    </tr>
+</table>
+<button type="button" onclick="tinh()">Tính</button>
+<script>
+    function tinh() {
+        let cao = parseInt(document.getElementById("cao").value)
+        let nang = parseInt(document.getElementById("nang").value)
+        let bmi = nang / ((cao * cao)/10000)
+        if (bmi < 18.5)
+            alert("Suy dinh dưỡng ")
+        else if (bmi < 25)
+            alert("Bình thường")
+        else if (bmi < 30)
+            alert("hơi béo")
+        else if (bmi >= 30)
+            alert("béo vl")
+    }
+</script>
+
+</body>
+</html>
