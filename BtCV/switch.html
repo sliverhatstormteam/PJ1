@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css">
+</head>
+<body>
+<table>
+    <tr></tr>
+    <td>
+        <div class="mt-ios">
+            <input id="good" type="checkbox" value="good" onchange="thaydoi()"/>
+            <label for="good"></label>
+        </div>
+    </td>
+    <td>Good</td>
+    </tr>
+    <tr>
+        <td>
+    </div>
+    <div class="mt-ios">
+        <input id="fast" type="checkbox" value="cheap" onchange="thaydoi3()"/>
+        <label for="fast"></label>
+    </div>
+        </td>
+        <td>Fast</td>
+    </tr>
+    <tr>
+        <td>
+    <div class="mt-ios">
+        <input id="cheap" type="checkbox" value="fast " onchange="thaydoi2()"/>
+        <label for="cheap"></label>
+    </div>
+        </td>
+        <td>Cheap</td>
+    </tr>
+</table>
+<!--<input id="good" type="checkbox" onclick="clickCheckbox('good')"> Good <br>-->
+<!--<input id="fast" type="checkbox" onclick="clickCheckbox('fast')"> Fast <br>-->
+<!--<input id="cheap" type="checkbox" onclick="clickCheckbox('cheap')"> Cheap <br>-->
+<script>
+    function thaydoi() {
+        let goodInput = document.getElementById("good");
+        let fastInput = document.getElementById("fast");
+        let cheapInput = document.getElementById("cheap");
+        if (goodInput.checked === true && fastInput.checked === true) {
+            cheapInput.checked = false;
+        }
+        if (goodInput.checked === true && cheapInput.checked === true) {
+            fastInput.checked = false;
+        }
+        if (fastInput.checked === true && cheapInput.checked === true) {
+            goodInput.checked = false;
+        }
+        if (cheapInput.checked === true && fastInput.checked === true) {
+            goodInput.checked = false;
+        }
+    }
+
+    function thaydoi2() {
+        let goodInput = document.getElementById("good");
+        let fastInput = document.getElementById("fast");
+        let cheapInput = document.getElementById("cheap");
+        cheapInput.checked = true
+        fastInput.checked = false
+    }
+    function thaydoi3() {
+        let goodInput = document.getElementById("good");
+        let fastInput = document.getElementById("fast");
+        let cheapInput = document.getElementById("cheap");
+        fastInput.checked = true
+        if(cheapInput.checked==true)goodInput.checked = false
+    }
+</script>
+</body>
+</html>
