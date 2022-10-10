@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<p> Bài 1:</p>
+<table>
+    <tr>
+        <td>
+            Nhâp vào 2 số a và b
+        </td>
+        <td>
+            <input type="text" id="a"><input type="text" id="b">
+        </td>
+    </tr>
+</table>
+<button type="button" onclick="tinh()">Tính</button>
+<br>
+<br>
+<p> Bài 2:</p>
+<p>Điều kiện vào nhập học</p>
+<table>
+    <tr>
+        <td>
+            Nhập độ tuổi
+        </td>
+        <td><input type="text" id="tuoi"></td>
+    </tr>
+</table>
+<br>
+<br>
+<p> Bài 3:</p>
+<p>Kiểm tra số nguyên</p>
+<table>
+    <tr>
+        <td>
+            Nhập vào số nguyên :
+        </td>
+        <td>
+            <input type="text" id="songuyen">
+        </td>
+    </tr>
+</table>
+<input type="button" onclick="tinhb3()" value="Tính">
+<br>
+<br>
+<p> Bài 4:</p>
+<p>Kiểm tra 3 số nguyên</p>
+<table>
+    <tr>
+        <td><input type="text" id="so1"></td>
+        <td><input type="text" id="so2"></td>
+        <td><input type="text" id="so3"></td>
+
+    </tr>
+</table>
+<button type="button" onclick="tinhb4()">Kiểm tra</button>
+<br>
+<br>
+<p> Bài 5:</p>
+<p>Phân loại học sinh: </p>
+<table>
+    <tr>
+        <td>Nhập điểm các bài kiểm tra:</td>
+        <td><input type="text" id="diem1" placeholder="Hệ số 1"></td>
+        <td><input type="text" id="diem2"placeholder="Hệ số 2"></td>
+        <td><input type="text" id="diem3" placeholder="Hệ số 3"></td>
+    </tr>
+</table>
+<button type="button" onclick="tinhb5()">Kiểm tra</button>
+<script>
+    function tinh() {
+        let a = +document.getElementById("a").value
+        let b = +document.getElementById("b").value
+        if (a % b == 0) alert("A chia hết cho b")
+        else alert("a không chia hết cho b")
+    }
+
+    function tinhb2() {
+        let tuoi = +document.getElementById("tuoi").value
+        if (tuoi >= 16) alert("đủ tuổi")
+        else alert("tuổi")
+
+    }
+
+    function tinhb3() {
+        let songuyen = +document.getElementById("songuyen").value
+        if (songuyen > 0) alert("Số nguyên lớn hơn 0")
+        else if (songuyen = 0) alert("số nguyên  = 0")
+        else alert("Số nguyên nhỏ hơn 0")
+
+    }
+
+    function tinhb4() {
+        let so1 = +document.getElementById("so1").value
+        let so2 = +document.getElementById("so2").value
+        let so3 = +document.getElementById("so3").value
+        let m = 0;
+        if (so1 > m) m = so1
+        if (so2 > m) m = so2
+        if (so3 > m) m = so3
+        alert("Số lớn nhât là " + m)
+
+    }
+    function tinhb5(){
+        let diem1 = +document.getElementById("diem1").value
+        let diem2 = +document.getElementById("diem2").value
+        let diem3 = +document.getElementById("diem3").value
+        let tong = (diem1+diem2*2+diem3*3)/6
+        if (tong>= 8.5) alert("học sinh giỏi")
+        else if (tong>=6.5)
+            alert("học sinh khá")
+        else alert("học sinh trung bình")
+
+    }
+</script>
+</body>
+</html>
