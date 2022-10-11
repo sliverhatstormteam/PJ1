@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num">
+<button type="button" onclick="tinh()"> tính</button>
+<script>
+  function tinh() {
+    let num = +document.getElementById("num").value
+    let sum = 0
+    for (let i = 1; i <= num; i++) {
+      sum = sum +i
+    }
+    alert(sum)
+  }
+</script>
+</body>
+</html>
