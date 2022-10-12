@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a">
+<button type="button" onclick="tinh()">tính</button>
+<p id="kq"></p>
+<script>
+         function tinh(){
+             let sum =0
+              let a = +document.getElementById("a").value
+             let kq =""
+             for (let i= 0,j=1; i<= 5;j++, i++)
+             {
+                 sum = sum + i+j
+                 kq += "j="+j+"  "+"i="+i+"sum="+sum+ '<br>';
+
+             }
+             document.getElementById("kq").innerHTML += kq + "<br>";
+
+
+         }
+</script>
+</body>
+</html>
