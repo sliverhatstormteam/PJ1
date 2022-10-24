@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+
+    let findAvg=[];
+    let tb=0;
+    let sum=0;
+    function findAvg() {
+        for (let i = 0; i < findAvg.length; i++) {
+            sum = sum + findAvg[i]
+        }
+        tb = sum / findAvg.length
+        alert(tb)
+    }
+    //bai2
+    let Array=[1,4,5,3,6,2];
+    let x=+prompt("Nhập số nguyên");
+    let index=+prompt("Nhập vị trí");
+    function insertNumberToArray(Array,x,index){
+        if(index<0 || index>Array.length){
+            alert(Array)
+        }
+        else{
+            Array.splice(index,0,x)
+            alert(Array)}
+    }
+    insertNumberToArray(Array,x, index);
+    let x = +prompt("Nhập số");
+    sumOfListPrime(x);
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let i = 2; i <= x; i++) {
+            let count = 0;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    count = 1
+                }
+            }
+            if (count == 0) {
+                sum = sum + i
+                document.write(i + " ")
+            }
+        }document.write('</br>'+sum)
+    }
+
+</script>
+</body>
+</html>
